@@ -1,4 +1,5 @@
 package encapsulation.exercises;
+import java.util.ArrayList;
 
 /**
  TODO:
@@ -23,4 +24,46 @@ package encapsulation.exercises;
 
 public class ShoppingCart
 {
+     // your code here
+     private ArrayList<String> items;
+     private double totalPrice;
+     
+     public ShoppingCart() {
+          this.items = new ArrayList<>();
+          this.totalPrice = 0.0;
+     }
+     
+     public void addItem(String item, double price) {
+          if (price >= 0) {
+               items.add(item);
+               totalPrice += price;
+          } else {
+               System.out.println("Negative price not allowed");
+          }
+     }
+     
+     public void removeItem(String item, double price) {
+          if (items.remove(item)) {
+               totalPrice -= price;
+          } else {
+               System.out.println("Item not found: " + item);
+          }
+     }
+     
+     public double getTotalPrice() {
+          return totalPrice;
+     }
+     
+     public ArrayList<String> getItems() {
+          return new ArrayList<>(items); 
+     }
+     
+     public void applyDiscount(double percentage) {
+          if (percentage >= 0 && percentage <= 50) {
+               totalPrice -= totalPrice * (percentage / 100);
+          } else {
+               System.out.println("Invalid discount percentage: " + percentage);
+          }
+     }
+
 }

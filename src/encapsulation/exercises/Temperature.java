@@ -10,4 +10,28 @@ package encapsulation.exercises;
 public class Temperature
 {
     // your code here
+    private double temperatureInCelsius;
+
+    public Temperature() {
+    }
+
+    public double getTemperatureInCelsius() {
+        return temperatureInCelsius;
+    }
+
+    public void setTemperatureInCelsius(double temperatureInCelsius) {
+        if (temperatureInCelsius >= -273) {
+            this.temperatureInCelsius = temperatureInCelsius;
+        }
+    }
+
+    public double getFahrenheit() {
+        return (temperatureInCelsius * 9/5) + 32;
+        // formula from https://www.google.com/search?q=get+fahrenheit+from+celsius&oq=get+fahrenheir&gs_lcrp=EgZjaHJvbWUqCAgBEAAYDRgeMgYIABBFGDkyCAgBEAAYDRgeMgoIAhAAGAUYDRgeMgoIAxAAGAUYDRgeMgoIBBAAGAUYDRgeMgoIBRAAGAUYDRgeMgoIBhAAGAUYDRgeMgoIBxAAGAUYDRgeMgoICBAAGAUYDRgeMgoICRAAGAUYDRge0gEINzI5MGowajSoAgCwAgA&sourceid=chrome&ie=UTF-8
+    }
+
+    public double getKelvin() {
+        return temperatureInCelsius + 273.15;
+        // formula from https://www.google.com/search?q=get+kelvin+from+celsius&oq=get+kelvin+from+celsius&gs_lcrp=EgZjaHJvbWUqCAgBEAAYDRgeMgYIABBFGDkyCAgBEAAYDRgeMgoIAhAAGAUYDRgeMgoIAxAAGAUYDRgeMgoIBBAAGAUYDRgeMgoIBRAAGAUYDRgeMgoIBhAAGAUYDRgeMgoIBxAAGAUYDRgeMgoICBAAGAUYDRgeMgoICRAAGAUYDRge0gEINzI5MGowajSoAgCwAgA&sourceid=chrome&ie=UTF-8
+    }
 }
