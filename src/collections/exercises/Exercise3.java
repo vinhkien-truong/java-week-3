@@ -1,5 +1,8 @@
 package collections.exercises;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  TODO:
  1. Create a Map<String, String> phoneBook (name → phone number).
@@ -10,4 +13,13 @@ package collections.exercises;
 */
 public class Exercise3
 {
+    public static void main(String[] args) {
+         Map<String, String> phoneBook = new HashMap<>();
+        phoneBook.put("Kien", "042222222");
+        phoneBook.put("Truong", "04893745");
+        phoneBook.put("Vinh", "04000333444");
+        System.out.println(phoneBook);
+        phoneBook.remove("Kien");
+        System.out.println(phoneBook);
+    }
 }
