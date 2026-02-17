@@ -9,4 +9,20 @@ package composition.exercises;
 
 public class Computer
 {
+    private Processor processor;
+    public Computer() {
+        this.processor = new Processor();
+    }
+    
+    public void processData() {
+         System.out.println("computer start processing data...");
+        this.processor.processData();
+    }
+}
+
+class Processor 
+{
+    public void processData() {
+        System.out.println("Processing data...");
+    }
 }

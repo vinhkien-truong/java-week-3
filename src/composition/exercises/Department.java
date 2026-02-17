@@ -1,5 +1,8 @@
 package composition.exercises;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  TODO:
  1. Create class Employee with fields: name, role.
@@ -13,4 +16,50 @@ package composition.exercises;
 
 public class Department
 {
+     private List<Employee> employees;
+
+     public Department() {
+          this.employees = new ArrayList<Employee>();
+     }
+
+     public List<Employee> getEmployees() {
+          return employees;
+     }
+
+     public void addEmployee(Employee employee) {
+          this.employees.add(employee);
+     }
+}
+
+class Employee {
+     private String name;
+     private String role;
+     
+     public Employee(String name, String role) {
+          this.name = name;
+          this.role = role;
+     }
+     public String getName() {
+          return name;
+     }
+     public String getRole() {
+          return role;
+     }
+}
+
+class Company 
+{
+     private List<Department> departments;
+
+     public Company() {
+          this.departments = new ArrayList<Department>();
+     }
+
+     public List<Department> getDepartments() {
+          return departments;
+     }
+
+     public void addDepartment(Department department) {
+          this.departments.add(department);
+     }
 }
