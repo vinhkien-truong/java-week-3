@@ -21,7 +21,9 @@ public class Exercise2
         cities.add("Shanghai");
         cities.add("Seoul");
         System.out.println(cities);
-        if (cities.contains("Seoul")){
+        cities.forEach(city -> System.out.print(city + " "));
+        System.out.println();
+       /* if (cities.contains("Seoul")){
             System.out.println("Seoul exist" );
         } 
         else {
@@ -32,7 +34,17 @@ public class Exercise2
         } 
         else {
             System.out.println("Kyoto doesn't exist");
-        }
+        }*/
+        checkCityExistence(cities, "Tokyo");
+        checkCityExistence(cities, "Kyoto");
         
+    }
+
+    public static void checkCityExistence(Set<String> cities, String city) {
+        if (cities.contains(city)) {
+            System.out.println(city + " exists in the set.");
+        } else {
+            System.out.println(city + " does not exist in the set.");
+        }
     }
 }

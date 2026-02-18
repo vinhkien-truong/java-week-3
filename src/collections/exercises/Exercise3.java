@@ -20,6 +20,9 @@ public class Exercise3
         phoneBook.put("Vinh", "04000333444");
         System.out.println(phoneBook);
         phoneBook.remove("Kien");
-        System.out.println(phoneBook);
+        for (String name : phoneBook.keySet())
+        {
+            System.out.println(name + " : " + phoneBook.get(name));
+        }
     }
 }
