@@ -12,4 +12,20 @@ package constructors.exercises;
 
 public class Student
 {
+     private String name;
+     private int id;
+     private static int studentCount = 0;
+
+     public Student(String name) {
+          this.name = name;
+          this.id = ++studentCount; 
+     }
+
+     public void getStudentInfo() {
+          System.out.println("Name: " + name + ", ID: " + id);
+     }
+
+     public static int getTotalStudents() {
+          return studentCount;
+     }
 }
