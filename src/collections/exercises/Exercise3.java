@@ -24,5 +24,9 @@ public class Exercise3
         {
             System.out.println(name + " : " + phoneBook.get(name));
         }
+        for (Map.Entry<String, String> entry : phoneBook.entrySet())
+        {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
     }
 }
