@@ -12,6 +12,12 @@ public class Exercise4
     public static void main(String[] args)
     {
         String text = "abc";  // try with "123"
+        try {
+            int number = Integer.parseInt(text);
+            System.out.println("Parsed number: " + number);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: '" + text + "' is not a valid number");
+        }
 
     }
 }
