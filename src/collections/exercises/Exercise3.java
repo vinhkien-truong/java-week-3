@@ -18,7 +18,7 @@ public class Exercise3
         phoneBook.put("Kien", "042222222");
         phoneBook.put("Truong", "04893745");
         phoneBook.put("Vinh", "04000333444");
-        System.out.println(phoneBook);
+        System.out.println(phoneBook.get("Kien"));
         phoneBook.remove("Kien");
         for (String name : phoneBook.keySet())
         {
