@@ -23,17 +23,22 @@ public class Library
             this.books.add(book);
         }
     
-        public List<Book> listBooks() {
-            return books;
+        public void listBooks() {
+          for (Book book : this.books) {
+            book.displayInfoBook();
+          }
+           // return books;
         }
 }
 class Book {
      private String title;
      private String author;
+     private int page;
 
-     public Book(String title, String author) {
+     public Book(String title, String author, int page) {
           this.title = title;
           this.author = author;
+          this.page = page;
      }
 
      public String getTitle() {
@@ -42,5 +47,13 @@ class Book {
 
      public String getAuthor() {
           return author;
+     }
+
+     public int getPage() {
+          return page;
+     }
+
+     public void displayInfoBook() {
+          System.out.println("title:"+ this.title + "\nauthor : " + this.author + "\npage: " + this.page);
      }
 }

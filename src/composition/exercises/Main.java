@@ -29,11 +29,12 @@ public class Main {
         house.printRoomArea();
 
         Library library = new Library();
-        library.addBook(new Book("title 1", "Kien"));
-        library.addBook(new Book("title 2", "Vinh"));
+        library.addBook(new Book("title 1", "Kien", 3));
+        library.addBook(new Book("title 2", "Vinh",4));
         System.out.println("Books in the library:");
-        for (Book book : library.listBooks()) {
-            System.out.println(book.getTitle() + " by " + book.getAuthor());
-        }
+        /*for (Book book : library.getBooks()) {
+            book.displayInfoBook();
+        }*/
+       library.listBooks();
     }
 }
