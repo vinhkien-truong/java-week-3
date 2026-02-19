@@ -18,6 +18,12 @@ public class PatternMatchingLab {
         if (value instanceof List<?> list) {
             return "List size=" + list.size();
         }
+        if (value instanceof Double d) {
+            return "Double value=" + d;
+        }
+        if (value instanceof Map<?, ?> map) {
+            return "Map size=" + map.size();
+        }
         return "Other";
     }
 
