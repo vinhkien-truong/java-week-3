@@ -28,5 +28,7 @@ public class Exercise3
         {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
+        System.out.println();
+        phoneBook.forEach((k,v) -> System.out.printf("%s : %s\n", k, v));
     }
 }
