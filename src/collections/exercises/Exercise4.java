@@ -1,9 +1,9 @@
 package collections.exercises;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
-import java.util.ArrayList;
 
 /**
  TODO:
@@ -19,9 +19,13 @@ public class Exercise4
 {
    public static void main(String[] args) {
          Map<String, List<Integer>> grades = new HashMap<>();
-         grades.put("Kien", List.of(85, 90, 78)); // init list from https://www.geeksforgeeks.org/java/initializing-a-list-in-java/
+         //init with arraylist
+         grades.put("Kien", new ArrayList<>(List.of(85, 90, 78)));
+         grades.put("Truong", new ArrayList<>(List.of(10, 24, 43)));
+         grades.put("Vinh", new ArrayList<>(List.of(47, 84, 23)));
+         /*grades.put("Kien", List.of(85, 90, 78)); // init list from https://www.geeksforgeeks.org/java/initializing-a-list-in-java/ but immutable
          grades.put("Truong", List.of(10, 24, 43));
-         grades.put("Vinh", List.of(47, 84, 23));
+         grades.put("Vinh", List.of(47, 84, 23));*/
          System.out.println(grades);
          Map<String, Double> avg = new HashMap<>();
          
@@ -31,7 +35,9 @@ public class Exercise4
             List<Integer> valList = entry.getValue();
 
             int sum = 0;
+            System.out.println(key + " grades:");
             for (int val : valList) {
+               System.out.println(val);
                sum += val;
             }
 
@@ -39,7 +45,7 @@ public class Exercise4
             avg.put(key, (double)calcAvg);
          }
 
-         System.out.println(avg);
+         avg.forEach((key, value) -> System.out.printf("avg %s: %.2f%n", key, value));
 
    }
 
