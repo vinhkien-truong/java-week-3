@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Department
 {
-     private List<Employee> employees;
+     private final List<Employee> employees;
 
      public Department() {
           this.employees = new ArrayList<Employee>();
@@ -49,7 +49,7 @@ class Employee {
 
 class Company 
 {
-     private List<Department> departments;
+     private final List<Department> departments;
 
      public Company() {
           this.departments = new ArrayList<Department>();

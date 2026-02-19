@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Library
 {
-        private List<Book> books;
+        private final List<Book> books;
     
         public Library() {
             this.books = new ArrayList<Book>();
