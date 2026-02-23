@@ -32,8 +32,8 @@ public class LibraryManagementSystem {
 
 class Library {
 
-    private Map<String, Book> books = new HashMap<>();
-    private List<Member> members = new ArrayList<>();
+    private final Map<String, Book> books = new HashMap<>();
+    private final List<Member> members = new ArrayList<>();
 
     public void addBook(Book book) {
         books.put(book.getIsbn(), book);
