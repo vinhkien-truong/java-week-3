@@ -26,15 +26,4 @@ public class Course {
         }
     }
 
-    public double calculateClassAverageGPA() {
-        if (students.isEmpty()) return 0.0;
-
-        double total = 0;
-        for (Student s : students) {
-            total += s.calculateGPA();
-        }
-
-        return total / students.size(); 
-    }
-
 }
