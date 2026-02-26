@@ -24,7 +24,7 @@ public class BankApp {
     }
 }
 
-class BankAccount {
+abstract class BankAccount {
     private String accountNumber;
     private double balance;
 
@@ -45,12 +45,18 @@ class BankAccount {
         if (amount > 0) {
             balance += amount;
         }
+         else {
+            throw new IllegalArgumentException("Deposit amount must be positive.");
+         }
     }
 
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
         }
+         else {
+            throw new IllegalArgumentException("Withdrawal amount must be positive and less than or equal to balance.");
+         }
     }
 
     public String toString() {
